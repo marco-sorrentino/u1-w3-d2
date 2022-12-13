@@ -135,9 +135,31 @@ function convertInNumber() {
 
 console.log(convertInNumber());
 
+/*
+const convertiStringhe = () => {
+  const numberString = [] 
+  for ( let i = 0 ; i < stringArray.length ; i++) {
+    numberString.push(stringArray[i].length)
+  }
+  return numberString
+}
+
+console.log(convertiStringhe())
+*/
+
 /* ESERCIZIO 9
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+function generaArray() {
+  const nuovoArray = [];
+  for (let i = 0; i < 100; i++) {
+    nuovoArray.push(Math.floor(Math.random() * 100));
+  }
+  return nuovoArray;
+}
+const newArray = generaArray();
+console.log(newArray);
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -263,13 +285,41 @@ const movies = [
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
+function howManyFilm(array) {
+  return array.length;
+}
+
+console.log(howManyFilm(movies));
+
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
+function onlyFilm() {
+  const arraDiFilm = [];
+  for (let i = 0; i < movies.length; i++) {
+    arraDiFilm.push(movies[i].Title);
+  }
+  return arraDiFilm;
+}
+
+console.log(onlyFilm());
+
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+
+function onlyMillenialFilm() {
+  const arraDiFilm = [];
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].Year >= 2000) {
+      arraDiFilm.push(movies[i].Title);
+    }
+  }
+  return arraDiFilm;
+}
+
+console.log(onlyMillenialFilm());
 
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
